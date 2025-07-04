@@ -1,0 +1,324 @@
+<html class="scroll-smooth" lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Pangkas Rambut - Salon Elegan &amp; Menarik
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fefefe 0%, #f9f7f6 100%);
+      color: #2c2c2c;
+    }
+    /* Animasi logo menari dengan efek smooth dan scale */
+    @keyframes dance {
+      0%, 100% {
+        transform: rotate(0deg) translateY(0) scale(1);
+        filter: drop-shadow(0 0 0 rgba(0,0,0,0));
+      }
+      20% {
+        transform: rotate(8deg) translateY(-6px) scale(1.05);
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+      }
+      40% {
+        transform: rotate(-8deg) translateY(6px) scale(1.05);
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+      }
+      60% {
+        transform: rotate(8deg) translateY(-6px) scale(1.05);
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+      }
+      80% {
+        transform: rotate(-8deg) translateY(6px) scale(1.05);
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+      }
+    }
+    .logo-dance {
+      animation: dance 4s ease-in-out infinite;
+      transform-origin: center bottom;
+      transition: filter 0.3s ease;
+    }
+    /* Gradient text for headings */
+    .gradient-text {
+      background: linear-gradient(90deg, #f59e0b, #b45309);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* Button gradient */
+    .btn-gradient {
+      background: linear-gradient(90deg, #f59e0b, #b45309);
+      color: white;
+      transition: background-position 0.5s ease;
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    .btn-gradient:hover {
+      background-position: right center;
+    }
+    /* Card shadow and hover */
+    .card {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(181, 134, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(181, 134, 0, 0.3);
+    }
+    /* Input focus */
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #b45309;
+      box-shadow: 0 0 8px #f59e0b;
+    }
+    /* Navigation underline effect */
+    nav a {
+      position: relative;
+      padding-bottom: 4px;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: #b45309;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+    nav a:hover::after, nav a:focus::after {
+      width: 100%;
+    }
+    /* Mobile menu background */
+    #mobile-menu {
+      background: #f59e0b;
+      color: white;
+    }
+  </style>
+ </head>
+ <body class="min-h-screen flex flex-col">
+  <header class="sticky top-0 z-50 bg-white shadow-lg">
+   <div class="container mx-auto flex items-center justify-between px-6 py-4">
+    <div class="flex items-center space-x-4">
+     <img alt="Logo gunting pangkas rambut berwarna emas dengan latar belakang putih bersih, desain minimalis dan elegan" class="logo-dance w-16 h-16" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/bce8c89a-5949-45b3-77a7-5915ad66a3f4.jpg" width="64"/>
+     <h1 class="text-4xl font-extrabold gradient-text select-none tracking-wide">
+      Pangkas Rambut Elegan
+     </h1>
+    </div>
+    <nav class="hidden md:flex space-x-10 font-semibold text-gray-700">
+     <a class="hover:text-yellow-700 focus:text-yellow-700 transition" href="#home" tabindex="0">
+      Beranda
+     </a>
+     <a class="hover:text-yellow-700 focus:text-yellow-700 transition" href="#services" tabindex="0">
+      Layanan
+     </a>
+     <a class="hover:text-yellow-700 focus:text-yellow-700 transition" href="#gallery" tabindex="0">
+      Galeri
+     </a>
+     <a class="hover:text-yellow-700 focus:text-yellow-700 transition" href="#location" tabindex="0">
+      Lokasi
+     </a>
+     <a class="hover:text-yellow-700 focus:text-yellow-700 transition" href="#contact" tabindex="0">
+      Kontak
+     </a>
+    </nav>
+    <button aria-label="Toggle menu" class="md:hidden text-yellow-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" id="menu-btn" type="button">
+     <i class="fas fa-bars fa-2x">
+     </i>
+    </button>
+   </div>
+   <nav class="hidden md:hidden px-6 py-5 space-y-4 font-semibold" id="mobile-menu">
+    <a class="block hover:text-yellow-900 focus:text-yellow-900 transition" href="#home" tabindex="0">
+     Beranda
+    </a>
+    <a class="block hover:text-yellow-900 focus:text-yellow-900 transition" href="#services" tabindex="0">
+     Layanan
+    </a>
+    <a class="block hover:text-yellow-900 focus:text-yellow-900 transition" href="#gallery" tabindex="0">
+     Galeri
+    </a>
+    <a class="block hover:text-yellow-900 focus:text-yellow-900 transition" href="#location" tabindex="0">
+     Lokasi
+    </a>
+    <a class="block hover:text-yellow-900 focus:text-yellow-900 transition" href="#contact" tabindex="0">
+     Kontak
+    </a>
+   </nav>
+  </header>
+  <main class="flex-grow container mx-auto px-6 py-12 space-y-28">
+   <section class="text-center max-w-4xl mx-auto" id="home">
+    <h2 class="text-5xl font-extrabold gradient-text mb-6 leading-tight">
+     Selamat Datang di
+     <br/>
+     Pangkas Rambut Elegan
+    </h2>
+    <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+     Nikmati layanan pangkas rambut profesional dengan sentuhan elegan dan suasana yang nyaman. Gaya rambut terbaik untuk tampil percaya diri setiap hari.
+    </p>
+    <img alt="Interior salon pangkas rambut modern dan elegan dengan kursi kulit hitam, cermin besar dengan frame emas, pencahayaan hangat dan dekorasi minimalis mewah" class="mx-auto mt-10 rounded-3xl shadow-2xl max-w-full w-[600px]" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/141a7a7b-c377-41fe-fb5d-ad335bf51a59.jpg" width="600"/>
+   </section>
+   <section class="max-w-6xl mx-auto" id="services">
+    <h3 class="text-4xl font-extrabold gradient-text mb-12 text-center">
+     Layanan Premium Kami
+    </h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+     <div class="card p-8 flex flex-col items-center text-center text-gray-800">
+      <img alt="Ilustrasi potong rambut pria dengan gunting dan sisir di salon bergaya elegan" class="mb-6 rounded-full border-8 border-yellow-400 shadow-lg w-32 h-32 object-cover" height="128" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e322a3aa-e8e3-448e-c078-6449ab02da4b.jpg" width="128"/>
+      <h4 class="text-2xl font-semibold mb-3">
+       Potong Rambut
+      </h4>
+      <p class="text-gray-600">
+       Potong rambut pria dan wanita dengan gaya modern dan klasik yang elegan dan rapi.
+      </p>
+     </div>
+     <div class="card p-8 flex flex-col items-center text-center text-gray-800">
+      <img alt="Ilustrasi cukur jenggot dan kumis dengan pisau cukur tradisional di salon bergaya mewah" class="mb-6 rounded-full border-8 border-yellow-400 shadow-lg w-32 h-32 object-cover" height="128" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c3db7e79-962e-40be-7a98-8c3a92c1c133.jpg" width="128"/>
+      <h4 class="text-2xl font-semibold mb-3">
+       Cukur Jenggot
+      </h4>
+      <p class="text-gray-600">
+       Perawatan dan cukur jenggot serta kumis agar tampilan lebih rapi dan maskulin.
+      </p>
+     </div>
+     <div class="card p-8 flex flex-col items-center text-center text-gray-800">
+      <img alt="Ilustrasi perawatan rambut dengan masker dan pijat kepala di salon mewah" class="mb-6 rounded-full border-8 border-yellow-400 shadow-lg w-32 h-32 object-cover" height="128" loading="lazy" src="https://storage.googleapis.com/a1aa/image/97e1e29b-9a43-46c2-a6af-302b4f5c2327.jpg" width="128"/>
+      <h4 class="text-2xl font-semibold mb-3">
+       Perawatan Rambut
+      </h4>
+      <p class="text-gray-600">
+       Perawatan rambut sehat dan berkilau dengan produk premium dan pijat kepala relaksasi.
+      </p>
+     </div>
+     <div class="card p-8 flex flex-col items-center text-center text-gray-800">
+      <img alt="Ilustrasi pewarnaan rambut dengan kuas dan botol cat rambut di salon mewah" class="mb-6 rounded-full border-8 border-yellow-400 shadow-lg w-32 h-32 object-cover" height="128" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0df052d0-88d5-43c4-d52e-4f87a5324575.jpg" width="128"/>
+      <h4 class="text-2xl font-semibold mb-3">
+       Cat Rambut
+      </h4>
+      <p class="text-gray-600">
+       Pewarnaan rambut dengan warna natural dan trendi sesuai keinginan Anda.
+      </p>
+     </div>
+     <div class="card p-8 flex flex-col items-center text-center text-gray-800">
+      <img alt="Ilustrasi styling rambut dengan hair dryer dan sisir di salon mewah" class="mb-6 rounded-full border-8 border-yellow-400 shadow-lg w-32 h-32 object-cover" height="128" loading="lazy" src="https://storage.googleapis.com/a1aa/image/03f0a113-5e54-44bb-2224-9b364159d90e.jpg" width="128"/>
+      <h4 class="text-2xl font-semibold mb-3">
+       Styling Rambut
+      </h4>
+      <p class="text-gray-600">
+       Styling rambut untuk acara spesial dengan hasil tahan lama dan rapi.
+      </p>
+     </div>
+     <div class="card p-8 flex flex-col items-center text-center text-gray-800">
+      <img alt="Ilustrasi konsultasi gaya rambut dengan stylist di salon mewah" class="mb-6 rounded-full border-8 border-yellow-400 shadow-lg w-32 h-32 object-cover" height="128" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2962d420-1bd7-4a5c-9787-a2f8957bd013.jpg" width="128"/>
+      <h4 class="text-2xl font-semibold mb-3">
+       Konsultasi Gaya
+      </h4>
+      <p class="text-gray-600">
+       Konsultasi gratis untuk menentukan gaya rambut yang paling cocok untuk Anda.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="max-w-7xl mx-auto" id="gallery">
+    <h3 class="text-4xl font-extrabold gradient-text mb-12 text-center">
+     Galeri Hasil Potong Rambut
+    </h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+     <img alt="Gaya rambut pria modern dengan potongan pendek rapi dan fade di sisi, latar belakang studio minimalis" class="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7b5d7907-5f26-4f4a-ef1d-ff2735e2e67b.jpg" width="400"/>
+     <img alt="Gaya rambut wanita trendi dengan potongan bob dan highlight warna coklat keemasan, latar belakang studio minimalis" class="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/47b9823d-01b9-4ccf-fc45-5f3b9aeb48ac.jpg" width="400"/>
+     <img alt="Potongan rambut klasik pria dengan model pompadour dan rambut disisir rapi ke belakang, latar belakang studio minimalis" class="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/848601e8-fdc2-4917-e4d4-eb2bca33c040.jpg" width="400"/>
+     <img alt="Potongan rambut anak-anak dengan gaya ceria dan rapi, rambut pendek dengan poni, latar belakang studio minimalis" class="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c2bfe6f5-efb7-4e93-42f4-446265afe8ff.jpg" width="400"/>
+     <img alt="Perawatan rambut di salon dengan masker rambut dan pijat kepala, latar belakang studio minimalis" class="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f60774a1-1e5d-4e05-4338-f9d6413a9c15.jpg" width="400"/>
+     <img alt="Styling rambut formal pria dengan gel dan sisir rapi ke samping, latar belakang studio minimalis" class="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer" height="320" loading="lazy" src="https://storage.googleapis.com/a1aa/image/543ff0a7-6c12-4c19-ae33-281bead90d2a.jpg" width="400"/>
+    </div>
+   </section>
+   <section class="max-w-5xl mx-auto text-gray-800" id="location">
+    <h3 class="text-4xl font-extrabold gradient-text mb-8 text-center">
+     Lokasi Kami
+    </h3>
+    <div class="flex flex-col md:flex-row md:space-x-12 items-center">
+     <div class="md:w-1/2 mb-8 md:mb-0 rounded-3xl overflow-hidden shadow-2xl">
+      <img alt="Peta lokasi salon pangkas rambut di kota dengan tanda lokasi berwarna emas dan latar belakang peta minimalis" class="w-full h-auto object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/cdcaa0a4-9cad-490f-6444-f0c6c12eccdb.jpg" width="600"/>
+     </div>
+     <div class="md:w-1/2 space-y-6 text-center md:text-left">
+      <p class="text-xl font-semibold">
+       Jalan Merdeka No. 123, Kecamatan Keren, Kota Jakarta Selatan, Indonesia
+      </p>
+      <p class="text-lg font-medium text-yellow-700">
+       Jam Operasional: Senin - Sabtu, 09.00 - 20.00 WIB
+      </p>
+      <p class="text-lg">
+       <i class="fas fa-phone-alt mr-2 text-yellow-600">
+       </i>
+       <a class="underline hover:text-yellow-800" href="tel:+628123456789" tabindex="0">
+        +62 812-3456-789
+       </a>
+      </p>
+      <p class="text-lg">
+       <i class="fas fa-envelope mr-2 text-yellow-600">
+       </i>
+       <a class="underline hover:text-yellow-800" href="mailto:info@pangkasrambutkeren.id" tabindex="0">
+        info@pangkasrambutkeren.id
+       </a>
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl p-10" id="contact">
+    <h3 class="text-4xl font-extrabold gradient-text mb-8 text-center">
+     Hubungi Kami
+    </h3>
+    <form action="#" class="space-y-8" method="POST" novalidate="">
+     <div>
+      <label class="block mb-3 font-semibold text-gray-700" for="name">
+       Nama Lengkap
+      </label>
+      <input class="w-full rounded-xl border border-gray-300 px-5 py-3 text-gray-700 placeholder-gray-400 focus:ring-4 focus:ring-yellow-300" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block mb-3 font-semibold text-gray-700" for="email">
+       Email
+      </label>
+      <input class="w-full rounded-xl border border-gray-300 px-5 py-3 text-gray-700 placeholder-gray-400 focus:ring-4 focus:ring-yellow-300" id="email" name="email" placeholder="Masukkan email Anda" required="" type="email"/>
+     </div>
+     <div>
+      <label class="block mb-3 font-semibold text-gray-700" for="phone">
+       Nomor Telepon
+      </label>
+      <input class="w-full rounded-xl border border-gray-300 px-5 py-3 text-gray-700 placeholder-gray-400 focus:ring-4 focus:ring-yellow-300" id="phone" name="phone" placeholder="Masukkan nomor telepon Anda" type="tel"/>
+     </div>
+     <div>
+      <label class="block mb-3 font-semibold text-gray-700" for="message">
+       Pesan
+      </label>
+      <textarea class="w-full rounded-xl border border-gray-300 px-5 py-3 text-gray-700 placeholder-gray-400 focus:ring-4 focus:ring-yellow-300" id="message" name="message" placeholder="Tulis pesan atau pertanyaan Anda" rows="5"></textarea>
+     </div>
+     <div class="text-center">
+      <button class="btn-gradient font-bold px-12 py-4 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-400" tabindex="0" type="submit">
+       Kirim Pesan
+      </button>
+     </div>
+    </form>
+   </section>
+  </main>
+  <footer class="bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 text-white py-6 mt-16 select-none">
+   <div class="container mx-auto text-center text-sm font-semibold tracking-wide">
+    © 2024 Pangkas Rambut Elegan. Semua hak cipta dilindungi.
+   </div>
+  </footer>
+  <script>
+   const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>
